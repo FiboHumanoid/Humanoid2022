@@ -1,0 +1,50 @@
+/////*** Motors Type Declaration ***/////
+char c_MotorLeftLeg_Type[c_MotorLeftLeg_Amount] = {'M' ,'M' ,'M' ,'M' ,'M' ,'M' }; /// ID :: [1, 2, 3, 4, 5, 6] ///
+char c_MotorRightLeg_Type[c_MotorRightLeg_Amount] = {'M' ,'M' ,'M' ,'M' ,'M' ,'M' }; /// ID :: [11, 12, 13, 14, 15, 16] ///
+char c_MotorLeftArm_Type[c_MotorLeftArm_Amount] = {'M' ,'M' ,'M' }; /// ID :: [21, 22] ///
+char c_MotorRightArm_Type[c_MotorRightArm_Amount] = {'M' ,'M' ,'M' }; /// ID :: [31, 32] ///
+
+
+/////*** Motors Center Value Declaration ***/////
+int i_MotorLeftLeg_Value_Center[c_MotorLeftLeg_Amount] = {2043 ,2019 ,2056 ,2069 ,2013 ,2047 }; /// ID :: [1, 2, 3, 4, 5, 6] ///
+int i_MotorRightLeg_Value_Center[c_MotorRightLeg_Amount] = {2042 ,2070 ,2045 ,2031 ,2080 ,2051 }; /// ID :: [11, 12, 13, 14, 15, 16] ///
+int i_MotorLeftArm_Value_Center[c_MotorLeftArm_Amount] = {2049 ,2460 ,1032 }; /// ID :: [21, 22] ///
+int i_MotorRightArm_Value_Center[c_MotorRightArm_Amount] = {2048 ,1561 ,3065 }; /// ID :: [31, 32] ///
+
+
+/////*** Getup ***/////
+/////*** Front Getup ***/////
+const int i_Motion_FrontGetup_State_Amount = 7;
+float f_Motion_FrontGetup_State_Parameter[i_Motion_FrontGetup_State_Amount][i_Motion_Parameter_Amount] = {
+{2044, 1941, 2456, 1464, 1729, 1972, 2041, 2155, 1646, 2635, 2364, 2133, 2048, 2404, 1033, 2049, 1617, 3064, /*Time*/  4*0.1},
+{2031, 2050, 3428, 590, 1476, 2037, 2085, 2051, 670, 3493, 2602, 2053, 1861, 1525, 1538, 2172, 2550, 2559, /*Time*/  4*0.1},
+{2031, 2045, 3385, 601, 1316, 2046, 2085, 2053, 691, 3501, 2772, 2060, 2700, 2512, 2900, 1400, 1595, 1200, /*Time*/  3*0.1},
+{1960, 2002, 3373, 615, 1445, 2011, 2110, 2115, 703, 3478, 2632, 2112, 2099, 2455, 2907, 2000, 1595, 1200, /*Time*/  4*0.1},
+{1930, 1926, 3469, 550, 1374, 1911, 2176, 2146, 645, 3580, 2781, 2179, 1264, 2441, 1038, 2776, 1663, 3013, /*Time*/  4*0.1},
+{1891, 1886, 3521, 441, 1363, 1837, 2191, 2184, 601, 3681, 2756, 2248, 1264, 2441, 1038, 2776, 1663, 3013, /*Time*/  5*0.1},
+{2044, 1941, 2456, 1464, 1729, 1972, 2041, 2155, 1646, 2635, 2364, 2133, 2048, 2404, 1033, 2049, 1617, 3064, /*Time*/  10*0.1}
+};
+/////*** Back Getup ***/////
+const int i_Motion_BackGetup_State_Amount = 5;
+float f_Motion_BackGetup_State_Parameter[i_Motion_BackGetup_State_Amount][i_Motion_Parameter_Amount] = {
+{2044, 1941, 2456, 1464, 1729, 1972, 2041, 2155, 1646, 2635, 2364, 2133, 2048, 2404, 1033, 2049, 1617, 3064, /*Time*/  4*0.1},
+{2124, 2051, 1823, 734, 1604, 1919, 1920, 2074, 2303, 3366, 2516, 2165, 4095, 2512, 2336, 0, 1595, 1753, /*Time*/  5*0.1},
+{2139, 1963, 1749, 734, 1127, 1873, 1971, 2122, 2347, 3381, 3006, 2165, 2801, 2409, 979, 1247, 1610, 3060, /*Time*/  5*0.1},
+{2039, 1920, 2517, 639, 1120, 1886, 2048, 2217, 1587, 3446, 2971, 2197, 2243, 2275, 1074, 1799, 1728, 3032, /*Time*/  8*0.1},
+{2044, 1941, 2456, 1464, 1729, 1972, 2041, 2155, 1646, 2635, 2364, 2133, 2048, 2404, 1033, 2049, 1617, 3064, /*Time*/  8*0.1}
+};
+/////*** MOTION SPECIAL 1 ***/////
+const int i_Motion_Special_1_State_Amount = 1;
+float f_Motion_Special_1_State_Parameter[i_Motion_Special_1_State_Amount][i_Motion_Parameter_Amount] = {
+{2046, 2051, 2045, 2077, 2051, 2048, 2049, 2092, 2040, 2034, 2043, 2070, 512, 512, 512, 512, 512, 512, /*Time*/  2*0.1}
+};
+/////*** MOTION SPECIAL 2 ***/////
+const int i_Motion_Special_2_State_Amount = 1;
+float f_Motion_Special_2_State_Parameter[i_Motion_Special_2_State_Amount][i_Motion_Parameter_Amount] = {
+{2046, 2051, 2045, 2077, 2051, 2048, 2049, 2092, 2040, 2034, 2043, 2070, 512, 512, 512, 512, 512, 512, /*Time*/  2*0.1}
+};
+/////*** MOTION SPECIAL 3 ***/////
+const int i_Motion_Special_3_State_Amount = 1;
+float f_Motion_Special_3_State_Parameter[i_Motion_Special_3_State_Amount][i_Motion_Parameter_Amount] = {
+{2046, 2051, 2045, 2077, 2051, 2048, 2049, 2092, 2040, 2034, 2043, 2070, 512, 512, 512, 512, 512, 512, /*Time*/  2*0.1}
+};
